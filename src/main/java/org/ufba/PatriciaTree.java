@@ -101,7 +101,7 @@ public class PatriciaTree {
             return;
         }
 
-        System.out.println(node.getWordTypeInPortuguese());
+        System.out.println("classe da palavra: "+word+": "+node.getWordTypeInPortuguese());
     }
 
     public void removeWord(String word){
