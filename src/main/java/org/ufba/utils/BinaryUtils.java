@@ -45,14 +45,14 @@ public class BinaryUtils {
 
         for(int i=0; i< w1.length(); i++){
             if(w1.charAt(i) != w2.charAt(i)){
-                return i;
+                return i+1;
             }
         }
         return -1; // there is no bit difference
     }
 
     public static char binaryAt(String text, int position){
-        return fillWithZero(toBinary(text), position).charAt(position);
+        return fillWithZero(toBinary(text), position).charAt(position -1);
     }
 
     public static String fillWithZero(String text, int length){
@@ -65,7 +65,7 @@ public class BinaryUtils {
 
         int numberOfZero = length - text.length();
 
-        for(int i=0; i<=numberOfZero; i++){
+        for(int i=0; i<=numberOfZero+1; i++){
             result+= "0";
         }
 
